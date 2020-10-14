@@ -9,6 +9,6 @@ services:
     ports:
       - "${PORT}:8080"
     volumes:
-      - "/home/mitirrli/docker-compose:/home/coder/project"
+      - "<dir>:/home/coder/project" #改成你的文件夹路径
     environment:
       PASSWORD: ${PASSWORD}
