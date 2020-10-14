@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  vscode:
+    container_name: 'vscode'
+    build:
+      context: .docker/vscode
+    restart: always
+    ports:
+      - "${PORT}:8080"
+    volumes:
+      - "/home/mitirrli/docker-compose:/home/coder/project"
+    environment:
+      PASSWORD: ${PASSWORD}
